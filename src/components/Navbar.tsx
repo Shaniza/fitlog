@@ -1,18 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import NavLinks from "./NavLinks";
 
 export default function Navbar() {
-  const pathname = usePathname();
-
   
   const planCount = 0;
   const savedCount = 0;
-
-  const isWorkout = pathname === "/" || pathname.startsWith("/workouts");
-  const isPlan = pathname === "/my-plan";
 
   return (
     <header className="border-b border-border bg-surface">
@@ -24,28 +17,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-2">
-          <Link
-            href="/"
-            className={`rounded-full px-4 py-1.5 text-sm ${
-              isWorkout
-                ? "bg-accent/20 font-semibold text-accent"
-                : "text-muted hover:text-white"
-            }`}
-          >
-            Workout
-          </Link>
-          <Link
-            href="/my-plan"
-            className={`rounded-full px-4 py-1.5 text-sm ${
-              isPlan
-                ? "bg-accent/20 font-semibold text-accent"
-                : "text-muted hover:text-white"
-            }`}
-          >
-            My Plan
-          </Link>
-        </div>
+        <NavLinks />
 
         <div className="flex items-center gap-2">
           <Link

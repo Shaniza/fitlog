@@ -15,3 +15,6 @@ body {
   color: #ffffff;
   font-family: var(--font-body), sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

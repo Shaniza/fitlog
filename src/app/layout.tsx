@@ -27,7 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth"  className={`${oswald.variable} ${inter.variable}`}> 
+   
       <body className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>
