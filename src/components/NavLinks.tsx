@@ -19,7 +19,7 @@ export default function NavLinks() {
             : "text-muted hover:text-white"
         }`}
       >
-        Workout
+        Workouts
       </Link>
       <Link
         href="/my-plan"

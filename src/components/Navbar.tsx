@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import PlanBadges from "./PlanBadges";
 
 export default function Navbar() {
   
-  const planCount = 0;
-  const savedCount = 0;
+ 
 
   return (
     <header className="border-b border-border bg-surface">
@@ -18,21 +18,9 @@ export default function Navbar() {
         </Link>
 
         <NavLinks />
+        <PlanBadges />
 
-        <div className="flex items-center gap-2">
-          <Link
-            href="/my-plan"
-            className="flex items-center gap-1 rounded-full bg-accent px-3 py-1 text-xs font-bold text-black"
-          >
-            Plan <span>{planCount}</span>
-          </Link>
-          <Link
-            href="/my-plan"
-            className="flex items-center gap-1 rounded-full border border-accent px-3 py-1 text-xs font-bold text-accent"
-          >
-            Saved <span>{savedCount}</span>
-          </Link>
-        </div>
+        
       </nav>
     </header>
   );
