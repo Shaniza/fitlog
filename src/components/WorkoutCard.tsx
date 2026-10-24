@@ -9,7 +9,7 @@ export default function WorkoutCard({ workout }: { workout: TWorkout }) {
       href={`/workouts/${workout.id}`}
       className="group block overflow-hidden rounded-xl border border-border bg-surface transition hover:border-accent"
     >
-      <div className="relative aspect-[1/2] w-full">
+      <div className="relative aspect-[3/4] w-full">
         <Image
           src={workout.image}
           alt={workout.name}
